@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px; /* Espacio entre tarjetas */
+    padding: 20px;
+  }
+
+.solicitud-card {
+    border: 2px solid gray; /* Borde por defecto */
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    flex: 1 1 calc(33% - 30px);
+    box-sizing: border-box;
+    max-width: 32%;
+    min-width: 300px;
+  }
+  
+  .solicitud-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .solicitud-card h3 {
+    color: gray;
+    margin: 0;
+  }
+  
+  .solicitud-card .estado {
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: white;
+  }
+  
+  /* Estilos para el estado 'En proceso' */
+  .en_proceso {
+    border-color: orange;
+  }
+  
+  .en_proceso .estado {
+    background-color: orange;
+  }
+  
+  /* Estilos para el estado 'Reservada' */
+  .reservada {
+    border-color: green;
+  }
+  
+  .reservada .estado {
+    background-color: green;
+  }
+  
+  /* Estilos para el estado 'Rechazada' */
+  .rechazada {
+    border-color: red;
+  }
+  
+  .rechazada .estado {
+    background-color: red;
+  }
+  
+  .solicitud-card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+  
+  .solicitud-card .card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: gray;
+  }
+  
+  @media (max-width: 1200px) {
+    .solicitud-card {
+      flex: 1 1 calc(50% - 30px); /* Se ajusta a 2 tarjetas por fila en pantallas medianas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .solicitud-card {
+      flex: 1 1 100%; /* Se ajusta a 1 tarjeta por fila en pantallas pequeñas */
+    }
+  }
